@@ -9,9 +9,9 @@ from sentence_transformers import SentenceTransformer
 # ================================
 # STEP 1: Config
 # ================================
-# os.environ["PINECONE_API_KEY"] = "pcsk_3XYFrG_3q9ZMQgEzzXES4CspRM3tioreLNjJYjZvHq3y9VidjAHyvGq7PcVtkp8a7ramd9"
-os.environ["PINECONE_API_KEY"] = "pcsk_58nZ62_UMekrnN77cyQzCL5Nm8R2dqxgpHATAKPyzpeCPeybqhYhKmUs6auMihQSKC239f"
-os.environ["GEMINI_API_KEY"] = "AIzaSyASs76tZ-GTQbh4oHRuWFGf3Ozbdpj2Nh0"
+# os.environ["PINECONE_API_KEY"] = ""
+os.environ["PINECONE_API_KEY"] = ""
+os.environ["GEMINI_API_KEY"] = ""
 
 try:
     pc = Pinecone(api_key=os.environ["PINECONE_API_KEY"])
@@ -119,3 +119,4 @@ def chat(q: Query):
         return {"answer": "⚠️ Gemini returned no content."}
     except Exception as e:
         return {"answer": f"⚠️ Error: {e}"}
+
